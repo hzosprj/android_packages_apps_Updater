@@ -41,7 +41,8 @@ android_app {
 
     required: [
         "privapp_whitelist_com.hertzify.updater",
-        "default-permissions_com.hertzify.updater"
+        "default-permissions_com.hertzify.updater",
+        "init.hertzify-updater.rc"
     ],
 }
 
@@ -59,4 +60,11 @@ prebuilt_etc {
     sub_dir: "default-permissions",
     src: "default-permissions_com.hertzify.updater.xml",
     filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "init.hertzify-updater.rc",
+    system_ext_specific: true,
+    sub_dir: "init",
+    src: "init.hertzify-updater.rc",
 }
