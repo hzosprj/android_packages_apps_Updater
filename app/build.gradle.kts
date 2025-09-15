@@ -1,7 +1,7 @@
 import java.util.Properties
-import org.lineageos.generatebp.GenerateBpPlugin
-import org.lineageos.generatebp.GenerateBpPluginExtension
-import org.lineageos.generatebp.models.Module
+import com.hertzify.generatebp.GenerateBpPlugin
+import com.hertzify.generatebp.GenerateBpPluginExtension
+import com.hertzify.generatebp.models.Module
 
 plugins {
     id("com.android.application")
@@ -18,7 +18,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.lineageos:gradle-generatebp:+")
+        classpath("com.hertzify:gradle-generatebp:+")
     }
 }
 
@@ -33,7 +33,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "org.lineageos.updater"
+        applicationId = "com.hertzify.updater"
         minSdk = 32
         targetSdk = 33
         versionCode = 1
@@ -81,7 +81,7 @@ android {
             }
         }
     }
-    namespace = "org.lineageos.updater"
+    namespace = "com.hertzify.updater"
 }
 
 dependencies {
